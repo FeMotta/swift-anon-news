@@ -13,6 +13,10 @@
 		ED2D2C24288EB86C001752B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2D2C23288EB86C001752B8 /* Preview Assets.xcassets */; };
 		ED2D2C2F288EB86C001752B8 /* ANONewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2D2C2E288EB86C001752B8 /* ANONewsTests.swift */; };
 		ED2D2C3A288EB86C001752B8 /* ANONewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2D2C39288EB86C001752B8 /* ANONewsUITests.swift */; };
+		ED2D2C4C288EBE7D001752B8 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2D2C4B288EBE7D001752B8 /* PostData.swift */; };
+		ED2D2C54288EBF8B001752B8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2D2C53288EBF8B001752B8 /* NetworkManager.swift */; };
+		ED2D2C60288EC787001752B8 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2D2C5F288EC787001752B8 /* DetailView.swift */; };
+		ED2D2C65288EC9E0001752B8 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2D2C64288EC9E0001752B8 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,11 @@
 		ED2D2C35288EB86C001752B8 /* ANONewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ANONewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2D2C39288EB86C001752B8 /* ANONewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANONewsUITests.swift; sourceTree = "<group>"; };
 		ED2D2C3B288EB86C001752B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED2D2C4B288EBE7D001752B8 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		ED2D2C53288EBF8B001752B8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		ED2D2C5F288EC787001752B8 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		ED2D2C64288EC9E0001752B8 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		ED2D2C6C288ECC5C001752B8 /* ANONews.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ANONews.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +104,10 @@
 		ED2D2C1B288EB868001752B8 /* ANONews */ = {
 			isa = PBXGroup;
 			children = (
+				ED2D2C6C288ECC5C001752B8 /* ANONews.entitlements */,
 				ED2D2C1C288EB868001752B8 /* ANONewsApp.swift */,
-				ED2D2C1E288EB868001752B8 /* ContentView.swift */,
+				ED2D2C5B288EC773001752B8 /* Views */,
+				ED2D2C4A288EBE6C001752B8 /* Models */,
 				ED2D2C20288EB86C001752B8 /* Assets.xcassets */,
 				ED2D2C25288EB86C001752B8 /* Info.plist */,
 				ED2D2C22288EB86C001752B8 /* Preview Content */,
@@ -128,6 +139,25 @@
 				ED2D2C3B288EB86C001752B8 /* Info.plist */,
 			);
 			path = ANONewsUITests;
+			sourceTree = "<group>";
+		};
+		ED2D2C4A288EBE6C001752B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED2D2C4B288EBE7D001752B8 /* PostData.swift */,
+				ED2D2C53288EBF8B001752B8 /* NetworkManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ED2D2C5B288EC773001752B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED2D2C1E288EB868001752B8 /* ContentView.swift */,
+				ED2D2C5F288EC787001752B8 /* DetailView.swift */,
+				ED2D2C64288EC9E0001752B8 /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +289,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2D2C54288EBF8B001752B8 /* NetworkManager.swift in Sources */,
 				ED2D2C1F288EB868001752B8 /* ContentView.swift in Sources */,
+				ED2D2C4C288EBE7D001752B8 /* PostData.swift in Sources */,
+				ED2D2C65288EC9E0001752B8 /* WebView.swift in Sources */,
+				ED2D2C60288EC787001752B8 /* DetailView.swift in Sources */,
 				ED2D2C1D288EB868001752B8 /* ANONewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,18 +451,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ANONews/ANONews.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ANONews/Preview Content\"";
 				DEVELOPMENT_TEAM = 93W537RQ3S;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ANONews/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CloudBased.ANONews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -439,18 +477,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ANONews/ANONews.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ANONews/Preview Content\"";
 				DEVELOPMENT_TEAM = 93W537RQ3S;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ANONews/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CloudBased.ANONews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
